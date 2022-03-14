@@ -1,11 +1,10 @@
-# Added dependencies
 import csv
 import os
 
-# Assign a variable for the file to load and the path.
-file_to_load = os.path.join("/Users/cristianedias/Desktop/Data Analysis/Resources/election_results.txt")
-# Create a filename variable to a direct or indirect of indirect path to the file.
-file_to_save = os.path.join("/Users/cristianedias/Desktop/Data Analysis/Election_Analysis/election_analysis.txt")
+# Add a variable to load a file from a path.
+file_to_load = os.path.join("Resources" , "election_results.csv")
+# Add a variable to save the file to a path.
+file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 # Initialize a total vote counter.
 total_votes = 0
@@ -77,11 +76,11 @@ with open(file_to_save, "w") as txt_file:
 
 # Print the final vote count (to terminal)
 election_results = (
-f"\nElection Results\n"
-f"-------------------------\n"
-f"Total Votes: {total_votes:,}\n"
-f"-------------------------\n\n"
-f"County Votes:\n"
+f"/nElection Results/n"
+f"-------------------------/n"
+f"Total Votes: {total_votes:,}/n"
+f"-------------------------/n/n"
+f"County Votes:/n"
 )
 print(election_results, end="")
 
@@ -95,7 +94,7 @@ votes = county_votes.get(county_name)
 # 6c: Calculate the percent of total votes for the county.
 vote_percentage = float(votes) / float(total_votes) * 100
 # 6d: Print the county results to the terminal.
-county_results = (f"{county_name}: {vote_percentage:.1f}% ({votes:,})\n")
+county_results = (f"{county_name}: {vote_percentage:.1f}% ({votes:,})/n")
 print(county_results, end="")
 # 6e: Save the county votes to a text file.
 txt_file.write(county_results)
@@ -106,9 +105,9 @@ if votes > largest_county_count:
 
 # 7: Print the county with the largest turnout to the terminal.
 largest_county_turnout = (
-f"\n-------------------------\n"
-f"Largest County Turnout: {largest_county}\n"
-f"-------------------------\n"
+f"/n-------------------------/n"
+f"Largest County Turnout: {largest_county}/n"
+f"-------------------------/n"
 )
 print(largest_county_turnout)
 
@@ -122,7 +121,7 @@ for candidate_name in candidate_votes:
 votes = candidate_votes.get(candidate_name)
 vote_percentage = float(votes) / float(total_votes) * 100
 candidate_results = (
-    f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+    f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})/n")
 
 # Print each candidate's voter count and percentage to the
 # terminal.
@@ -138,11 +137,11 @@ if (votes > winning_count) and (vote_percentage > winning_percentage):
 
 # Print the winning candidate (to terminal)
 winning_candidate_summary = (
-f"-------------------------\n"
-f"Winner: {winning_candidate}\n"
-f"Winning Vote Count: {winning_count:,}\n"
-f"Winning Percentage: {winning_percentage:.1f}%\n"
-f"-------------------------\n")
+f"-------------------------/n"
+f"Winner: {winning_candidate}/n"
+f"Winning Vote Count: {winning_count:,}/n"
+f"Winning Percentage: {winning_percentage:.1f}%/n"
+f"-------------------------/n")
 print(winning_candidate_summary, end="")
 
 # Save the winning candidate's name to the text file
