@@ -5,12 +5,6 @@
 The purpose of this project is to demonstrate the election audit of the Colorado Board of Elections as requested.
 With the process of auditing we will be able to identify percentages of total votes, a breakdown of numbers and refined information per county and candidates in the matter of this election, we will see more details further on.
 
-## Resources
-
-**Data Source:** election_results.csv
-
-**Software:** Python 3.8.3, Visual Studio Code 1.46.0
-
 ## Summary
 
 After analysis of the election results, we discovered the following information:
@@ -31,3 +25,14 @@ After analysis of the election results, we discovered the following information:
 We can see that information extracted from file analysis:
 
 <img src="https://github.com/abramscris/Election_Analysis/blob/main/Analysis/Election_Analysis.PNG" width="350">
+
+## Election- Audit Summary 
+
+As we could see by the end of this project the script for PyPoll_Challenge.py gave accurate information about the Colorado Board of Elections. This code covers the data analyzing for the second and third row of the data provided, what means this could be easily change if the user were to use more rows or add data to the data base.
+I propose to the Commission election to use this code for different election data analysis. As an example, the program can be modified to determine which column read data changing the header row, this way you can have a different approach as deemed necessary. Also, another possibility would be read the data from additional columns as I can imagine you must have more complex data sets to cover, and this code can be applied for multiple information extracting.
+
+## Resources
+
+**Data Source:** election_results.csv
+
+**Software:** Python 3.8.3, Visual Studio Code 1.46.0
